@@ -22,5 +22,5 @@ urlpatterns = [
     path("",List_product.as_view()),
     path("add",Create_product.as_view()),
     path("up/<int:pk>/",Update_product.as_view()),
-    path("de/<int:pk>/",Delete_Product.as_view())
+
 ]

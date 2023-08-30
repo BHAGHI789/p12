@@ -22,8 +22,3 @@ class Update_product(GenericAPIView,UpdateModelMixin):
     serializer_class=Productserializer
     def put(self,request,**kwargs):
         return self.update(request,**kwargs)
-class Delete_Product(GenericAPIView,DestroyModelMixin):
-    queryset=Product.objects.all()
-    serializer_class=Productserializer
-    def delete(self,request,**kwargs):
-        return self.destroy(self,**kwargs)
