@@ -11,3 +11,4 @@ class List_product(GenericAPIView,ListModelMixin):
     serializer_class=Productserializer
     def get(self,request):
         return self.list(request)
+
