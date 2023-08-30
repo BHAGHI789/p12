@@ -11,14 +11,3 @@ class List_product(GenericAPIView,ListModelMixin):
     serializer_class=Productserializer
     def get(self,request):
         return self.list(request)
-    
-class Create_product(GenericAPIView,CreateModelMixin):
-    queryset=Product.objects.all()
-    serializer_class=Productserializer
-    def post(self,request):
-        return self.create(request)
-class Update_product(GenericAPIView,UpdateModelMixin):
-    queryset=Product.objects.all()
-    serializer_class=Productserializer
-    def put(self,request,**kwargs):
-        return self.update(request,**kwargs)
